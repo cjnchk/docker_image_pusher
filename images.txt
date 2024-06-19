@@ -1,1 +1,14 @@
+--platform=linux/arm64 python
+--platform=linux/arm64 gitlab/gitlab-runner:latest
+--platform=linux/arm64 gitlab/gitlab-runner-helper:x86_64-latest
+--platform=linux/arm64 golang:1.16
 --platform=linux/arm64 golang:1.20
+--platform=linux/arm64 hyroai/kaniko:debug
+--platform=linux/arm64 bitnami/kubectl:latest
+--platform=linux/arm64 hyroai/kaniko:debug
+--platform=linux/arm64 alpine:3.13.6
+--platform=linux/arm64 alpine:3.18
+--platform=linux/arm64 busybox:1.33.1-glibc
+--platform=linux/arm64 busybox:1.36.1-glibc
+--platform=linux/arm64 node:14.9.0
+--platform=linux/arm64 nginx:1.20.1-alpine
