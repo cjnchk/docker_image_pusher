@@ -10,4 +10,5 @@
 --platform=linux/amd64 busybox:1.33.1-glibc
 --platform=linux/amd64 busybox:1.36.1-glibc
 --platform=linux/amd64 node:14.9.0
+--platform=linux/amd64 node:22.3.0
 --platform=linux/amd64 nginx:1.20.1-alpine
