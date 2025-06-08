@@ -3,6 +3,7 @@
 --platform=linux/amd64 gitlab/gitlab-runner-helper:x86_64-latest
 --platform=linux/amd64 golang:1.16
 --platform=linux/amd64 golang:1.20
+--platform=linux/amd64 golang:1.24.3
 --platform=linux/amd64 hyroai/kaniko:debug
 --platform=linux/amd64 bitnami/kubectl:latest
 --platform=linux/amd64 alpine:3.13.6
