@@ -23,18 +23,20 @@ jobs:
           df -hT
           echo "=============================================================================="
 
-      # 增加可用磁盘空间
-      - name: Maximize build space
-        uses: easimon/maximize-build-space@master
+      # 深度释放根目录与系统磁盘空间
+      # 注意：Ubuntu 24.04+ 的 Docker 默认启用 containerd 镜像存储，
+      # 镜像层写在 /var/lib/containerd 而不是 /var/lib/docker，
+      # 用 maximize-build-space 只扩容 /var/lib/docker 会导致根分区被占满。
+      - name: Free Disk Space (Ubuntu)
+        uses: jlumbroso/free-disk-space@main
         with:
-          root-reserve-mb: 2048
-          swap-size-mb: 128
-          remove-dotnet: "true"
-          remove-haskell: "true"
-          # 如果空间还是不够用，可以把以下开启，清理出更多空间
-          # remove-android: 'true'
-          # remove-codeql: 'true'
-          build-mount-path: "/var/lib/docker/"
+          tool-cache: false
+          android: true
+          dotnet: true
+          haskell: true
+          large-packages: true
+          docker-images: true
+          swap-storage: true
 
       - name: Restart docker
         run: sudo service docker restart
