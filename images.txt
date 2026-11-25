@@ -1,5 +1,5 @@
 #--platform=linux/amd64 python
---platform=linux/amd64 gitlab/gitlab-runner:v14.0.1
+--platform=linux/amd64 gitlab/gitlab-runner:alpine-v14.0.1
 --platform=linux/amd64 gitlab/gitlab-runner-helper:x86_64-v14.0.1
 #--platform=linux/amd64 golang:1.16
 #--platform=linux/amd64 golang:1.20
